@@ -1,0 +1,13 @@
+.canvas {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+ background-image: url(../img/bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  border: solid gray 1px;
+}
