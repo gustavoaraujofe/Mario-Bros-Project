@@ -41,6 +41,12 @@ function main() {
     }   
   }
   
+  function teclaDireitaSolta(event){
+    if(event.key === 'ArrowRight'){
+      trocaDeMario();
+    }   
+  }
+
   function teclaEsquerda(event) {
     if(event.key === 'ArrowLeft'){
       console.log('pra esquerda')

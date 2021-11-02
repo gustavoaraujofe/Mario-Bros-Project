@@ -1,11 +1,17 @@
 const imgBackground = document.getElementById("background");
-const marioParado = document.getElementById("marioParado");
 const blocoFim = document.getElementById("bloco-fim");
 const containerInstrucoes = document.getElementById("container-intrucoes");
 const blocoVencedor = document.getElementById("bloco-vencedor");
 const botaoResetVencedor = document.getElementById("botaoReset-winner");
 const audio = document.getElementById("audio");
 const audioWinner = document.getElementById("audioSource");
+const marioParado = new Image();
+marioParado.src = "./assets/img/marioParado2.png"
+
+const marioCorrendo = new Image();
+marioCorrendo.src = "./assets/img/marioRun2.png"
+
+
 
 let canvas,
   context,
@@ -29,11 +35,11 @@ let canvas,
   bloco = {
     x: 50,
     y: 398,
-    altura: 50,
+    img: marioParado,
+    altura: 80,
     largura: 50,
-    cor: "rgb(204, 201, 0)",
     gravidade: 0.5,
-    velocidade: 0,
+    velocidade: 10,
     forcaDoPulo: 15,
 
     atualiza: function (event) {
@@ -45,8 +51,15 @@ let canvas,
       }
     },
 
+    desenha: function () {
+      /*context.fillStyle = this.cor;
+      context.fillRect(this.x, this.y, this.largura, this.altura);*/
+      
+      context.drawImage(this.img, this.x, this.y)
+    },
+
     pula: function () {
-      if (this.y === 398) {
+      if (this.y > 358) {
         this.velocidade = -this.forcaDoPulo;
         let id = setInterval(() => {
           if (this.x < 600 && chao.y < 500) {
@@ -60,6 +73,7 @@ let canvas,
     andarDireita: function () {
       if (this.x < 600) {
         this.x += 10;
+        this.img = marioCorrendo
       }
     },
 
@@ -77,10 +91,7 @@ let canvas,
       }
     },
 
-    desenha: function () {
-      context.fillStyle = this.cor;
-      context.fillRect(this.x, this.y, this.largura, this.altura);
-    },
+    
   },
   inimigo1 = {
     x: 700,
@@ -721,6 +732,9 @@ function audioPerdedor() {
   audio.setAttribute("src", "./assets/sound/gameOver.wav");
 }
 
+function trocaDeMario(){
+  bloco.img = marioParado;
+}
 
 main();
 audioFundo()
@@ -730,6 +744,7 @@ document.addEventListener("keydown", teclaDireita);
 document.addEventListener("keydown", teclaEsquerda);
 document.addEventListener("keydown", teclaCima);
 document.addEventListener("keydown", teclaBaixoPress);
+document.addEventListener("keyup", teclaDireitaSolta);
 document.addEventListener("keyup", teclaBaixoSolta);
 document.addEventListener("keypress", barraEspaço);
 document.addEventListener("keydown", enter);
