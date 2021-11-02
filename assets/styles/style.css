@@ -1,13 +1,109 @@
+body {
+  height: 100vh;
+  background-color: rgb(174, 219, 250);
+}
 .canvas {
   position: absolute;
+  z-index: -1;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
- background-image: url(../img/bg.png);
+  border: solid rgba(0, 0, 0, 0.561) 2px;
+  color: rgb(49, 195, 4);
+}
+
+.container-intrucoes {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  z-index: 2;
+  height: 100%;
+  max-width: 100%;
+  margin: auto;
+  background-image: url("../img/tela-inicial.jpg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
-  border: solid gray 1px;
+}
+
+.bloco-instrucoes {
+  background-color: rgba(255, 255, 255, 0.979);
+  border-radius: 3%;
+  padding: 25px 50px 15px 50px;
+  line-height: 40px;
+  margin-bottom: 40px;
+  box-shadow: 2px 2px 5px black;
+}
+
+.bloco-instrucoes img {
+  margin-left: 10px;
+}
+
+.bloco-instrucoes h1 {
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.bloco-instrucoes h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.bloco-instrucoes p {
+  font-weight: 600;
+}
+
+.bloco-fim {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.bloco-fim-container {
+  background-color: rgb(220, 0, 0);
+  border-radius: 3%;
+  padding: 25px 50px 15px 50px;
+  line-height: 20px;
+  font-weight: 900;
+  color: white;
+  text-shadow: 3px 3px 3px black;
+}
+
+.bloco-fim img {
+  width: 320px;
+  margin-bottom: 20px;
+}
+
+.containerBotao {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 2;
+  margin-top: 25px;
+  margin-bottom: 5px;
+}
+
+.containerBotao button {
+  background-color: white;
+  color: black;
+  font-weight: 700;
+}
+
+.bloco-vencedor-container {
+  background-color: rgb(242, 242, 242);
+  text-align: center;
+  color: black;
+  text-shadow: none;
+}
+
+.bloco-vencedor img {
+  width: 250px;
+}
+
+.ocultar {
+  display: none;
 }
