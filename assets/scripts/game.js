@@ -6,8 +6,6 @@ function main() {
    
     context = canvas.getContext("2d");
     rodar();
-    
-  
   }
   
   function teclaCima(event) {
