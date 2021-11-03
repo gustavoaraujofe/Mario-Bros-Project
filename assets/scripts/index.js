@@ -6,7 +6,8 @@ const botaoResetVencedor = document.getElementById("botaoReset-winner");
 const botaoReset2 = document.getElementById("botaoReset2");
 const blocoSemMoedas = document.getElementById("bloco-sem-moedas");
 const audio = document.getElementById("audio");
-const audioWinner = document.getElementById("audioSource");
+const somVenceu = document.getElementById("som-venceu");
+const somPerdeu = document.getElementById("som-perdeu");
 const somMoedinha = document.getElementById("som-moedinha");
 const puloMario = document.getElementById("pulo-mario");
 
@@ -831,11 +832,15 @@ function musicaFundo() {
 }
 
 function audioVencedor() {
-  audio.setAttribute("src", "./assets/sound/victory.wav");
+  somVenceu.play();
+  somVenceu.volume = 0.6;
+  audio.pause();
 }
 
 function audioPerdedor() {
-  audio.setAttribute("src", "./assets/sound/gameOver.wav");
+  somPerdeu.play();
+  somPerdeu.volume = 0.6;
+  audio.pause();
 }
 
 function trocaMarioParado() {
@@ -851,6 +856,7 @@ function trocaMarioParadoInvertido() {
 }
 
 main();
+
 botaoReset2.addEventListener("click", reset);
 botaoResetVencedor.addEventListener("click", reset);
 botaoReset.addEventListener("click", reset);
