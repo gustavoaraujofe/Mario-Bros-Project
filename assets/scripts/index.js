@@ -1,3 +1,4 @@
+const containerJogo = document.getElementById("canvas")
 const imgBackground = document.getElementById("background");
 const blocoFim = document.getElementById("bloco-fim");
 const containerInstrucoes = document.getElementById("container-intrucoes");

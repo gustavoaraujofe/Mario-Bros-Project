@@ -57,6 +57,7 @@ function enter(event) {
       iniciarJogo();
       containerInstrucoes.classList.add("ocultar");
       musicaFundo();
+      containerJogo.classList.remove("ocultar")
     }
   }
 }
