@@ -1,6 +1,6 @@
 function main() {
   canvas.height = 500;
-  canvas.width = 700;
+  canvas.width = 900;
   largura = canvas.width;
   altura = canvas.height;
 
@@ -92,14 +92,18 @@ function desenhar() {
   }
 }
 
-function vencedor() {
+function concluir() {
   estadoAtual = 3;
-  blocoVencedor.classList.remove("ocultar");
-  audioVencedor();
+  if (qtdMoedinha >= 2) {
+    blocoVencedor.classList.remove("ocultar");
+    audioVencedor();
+  } else {
+    blocoSemMoedas.classList.remove("ocultar");
+    audioPerdedor();
+  }
 }
 
 function morte() {
-  bonecoMario.pula();
   movimentoMorteMario();
   blocoFim.classList.remove("ocultar");
   audioPerdedor();
@@ -110,39 +114,46 @@ function reset() {
 }
 
 function desenharInimigo() {
-  inimigo1.desenha();
-  inimigo2.desenha();
-  inimigo3.desenha();
-  inimigo4.desenha();
-  inimigo5.desenha();
-  inimigo6.desenha();
-  inimigo7.desenha();
-  inimigo8.desenha();
-  inimigo9.desenha();
-  inimigo10.desenha();
-  inimigo11.desenha();
-  inimigo12.desenha();
-  inimigo13.desenha();
-  inimigo14.desenha();
-  inimigo15.desenha();
+  inimigo1.dados.desenha();
+  inimigo2.dados.desenha();
+  inimigo3.dados.desenha();
+  inimigo4.dados.desenha();
+  inimigo5.dados.desenha();
+  inimigo6.dados.desenha();
+  inimigo7.dados.desenha();
+  inimigo8.dados.desenha();
+  inimigo9.dados.desenha();
+  inimigo10.dados.desenha();
+  inimigo11.dados.desenha();
+  inimigo12.dados.desenha();
+  inimigo13.dados.desenha();
+  inimigo14.dados.desenha();
+  inimigo15.dados.desenha();
+  moedinhaOuro1.dados.desenha();
+  moedinhaOuro2.dados.desenha();
+  moedinhaOuro3.dados.desenha();
   bandeiraFim.desenha();
+  contadorMoedinhas.desenha();
 }
 
 function movimentoInimigo() {
-  inimigo1.movimento();
-  inimigo2.movimento();
-  inimigo3.movimento();
-  inimigo4.movimento();
-  inimigo5.movimento();
-  inimigo6.movimento();
-  inimigo7.movimento();
-  inimigo8.movimento();
-  inimigo9.movimento();
-  inimigo10.movimento();
-  inimigo11.movimento();
-  inimigo12.movimento();
-  inimigo13.movimento();
-  inimigo14.movimento();
-  inimigo15.movimento();
+  inimigo1.dados.movimento();
+  inimigo2.dados.movimento();
+  inimigo3.dados.movimento();
+  inimigo4.dados.movimento();
+  inimigo5.dados.movimento();
+  inimigo6.dados.movimento();
+  inimigo7.dados.movimento();
+  inimigo8.dados.movimento();
+  inimigo9.dados.movimento();
+  inimigo10.dados.movimento();
+  inimigo11.dados.movimento();
+  inimigo12.dados.movimento();
+  inimigo13.dados.movimento();
+  inimigo14.dados.movimento();
+  inimigo15.dados.movimento();
+  moedinhaOuro1.dados.movimento();
+  moedinhaOuro2.dados.movimento();
+  moedinhaOuro3.dados.movimento();
   bandeiraFim.movimento();
 }

@@ -2,6 +2,7 @@ body {
   height: 100vh;
   background-color: rgb(174, 219, 250);
 }
+
 .canvas {
   position: absolute;
   z-index: -1;
@@ -11,7 +12,6 @@ body {
   right: 0;
   margin: auto;
   border: solid rgba(0, 0, 0, 0.561) 2px;
-  color: rgb(49, 195, 4);
 }
 
 .container-intrucoes {
@@ -30,12 +30,18 @@ body {
 }
 
 .bloco-instrucoes {
-  background-color: rgba(255, 255, 255, 0.979);
+  background-color: rgba(255, 255, 255, 0.883);
   border-radius: 3%;
   padding: 25px 50px 15px 50px;
   line-height: 40px;
   margin-bottom: 40px;
   box-shadow: 2px 2px 5px black;
+  max-width: 550px;
+}
+
+.bloco-instrucoes>p {
+  font-size: 18px;
+  margin-bottom: 30px;
 }
 
 .bloco-instrucoes img {
@@ -48,11 +54,13 @@ body {
 }
 
 .bloco-instrucoes h2 {
-  font-size: 20px;
+  font-size: 25px;
   margin-bottom: 20px;
 }
+
 .bloco-instrucoes p {
   font-weight: 600;
+  color: rgb(77, 76, 76);
 }
 
 .bloco-fim {
@@ -71,11 +79,12 @@ body {
   font-weight: 900;
   color: white;
   text-shadow: 3px 3px 3px black;
+  max-width: 420px;
 }
 
 .bloco-fim img {
   width: 320px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .containerBotao {
@@ -91,6 +100,7 @@ body {
   background-color: white;
   color: black;
   font-weight: 700;
+  margin-top: 10px;
 }
 
 .bloco-vencedor-container {

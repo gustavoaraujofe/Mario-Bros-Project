@@ -17,6 +17,11 @@
     <div id="container-intrucoes" class="container-intrucoes">
       <div class="bloco-instrucoes">
         <h1 class="ocultar">Super Mario Bros</h1>
+        <h2>Instruções</h2>
+        <p>
+          Você deve desviar de todos os inimigos e pegar pelo menos 2 moedas
+          para vencer!
+        </p>
         <h2>Comandos</h2>
         <div>
           <p class="d-inline">Pular: Seta pra cima</p>
@@ -49,7 +54,7 @@
     <section id="bloco-fim" class="bloco-fim ocultar">
       <div class="bloco-fim-container">
         <div>
-          <img src="./assets/img/game-over.jpeg" alt="" />
+          <img src="./assets/img/game-over.jpeg" alt="game over" />
           <p>Xiiiiii...</p>
           <p>Você morreu!</p>
           <p>Clique em <strong>Reset</strong> para tentar novamente</p>
@@ -74,6 +79,19 @@
         </div>
       </div>
     </section>
+    <section id="bloco-sem-moedas" class="bloco-fim ocultar">
+      <div class="bloco-fim-container">
+        <div>
+          <img src="./assets/img/game-over.jpeg" alt="game over" />
+          <p>Poxaaaa...</p>
+          <p>Você completou mas não pegou a quantidade suficiente de moedas!</p>
+          <p>Clique em <strong>Reset</strong> para tentar novamente</p>
+        </div>
+        <div class="containerBotao">
+          <button id="botaoReset2" class="btn btn-primary btn-sm">Reset</button>
+        </div>
+      </div>
+    </section>
 
     <audio id="audio" autoplay class="d-none">
       <source
@@ -81,6 +99,14 @@
         src="./assets/sound/music.mp3"
         type="audio/mpeg"
       />
+    </audio>
+
+    <audio id="som-moedinha">
+      <source src="./assets/sound/som-moedinha.mp3" type="audio/mpeg" />
+    </audio>
+
+    <audio id="pulo-mario">
+      <source src="./assets/sound/pulo-mario.mp3" type="audio/mpeg" />
     </audio>
 
     <script src="./assets/scripts/game.js"></script>
