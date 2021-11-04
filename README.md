@@ -22,7 +22,7 @@ Super Mario sempre foi um jogo que me atraiu bastante desde a infância e esse f
 - [Jogar](https://gustavoaraujofe.github.io/Mario-Bros-Project/)
 
 ## Link para a apresentação em slides
-- [Slides] (https://docs.google.com/presentation/d/10gUly10doxrOapuUQIxMY7WLWe4cSDh25B0g7Mf54BM/edit?usp=sharing)
+- [Slides](https://docs.google.com/presentation/d/10gUly10doxrOapuUQIxMY7WLWe4cSDh25B0g7Mf54BM/edit?usp=sharing)
 
 ## Desenvolvedor
 - Luis Gustavo Araújo Ferreira - gustavoaraujofe@gmail.com
