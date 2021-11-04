@@ -19,10 +19,12 @@ Super Mario sempre foi um jogo que me atraiu bastante desde a infância e esse f
 - Andar pra frente: Seta pra direita
 
 ## Link para o jogo
-- [JOGAR](https://gustavoaraujofe.github.io/Mario-Bros-Project/)
+- [Jogar](https://gustavoaraujofe.github.io/Mario-Bros-Project/)
 
+## Link para slide da apresentação
+- [Slides] (https...)
 
 ## Desenvolvedor
 - Luis Gustavo Araújo Ferreira - gustavoaraujofe@gmail.com
 
-[![Github Badge](https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white&link=https://github.com/gustavoaraujofe)](https://github.com/gustavoaraujofe) [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/luis-gustavo-ara%C3%BAjo-ferreira-264b59b5/)](https://www.linkedin.com/in/luis-gustavo-ara%C3%BAjo-ferreira-264b59b5/)
+[![Github Badge](https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white&link=https://github.com/gustavoaraujofe)](https://github.com/gustavoaraujofe) [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/gustavoaraujofe)](https://www.linkedin.com/in/gustavoaraujofe)

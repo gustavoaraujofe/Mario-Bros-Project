@@ -1,4 +1,4 @@
-const containerJogo = document.getElementById("canvas")
+const containerJogo = document.getElementById("canvas");
 const imgBackground = document.getElementById("background");
 const blocoFim = document.getElementById("bloco-fim");
 const containerInstrucoes = document.getElementById("container-intrucoes");
@@ -11,6 +11,7 @@ const somVenceu = document.getElementById("som-venceu");
 const somPerdeu = document.getElementById("som-perdeu");
 const somMoedinha = document.getElementById("som-moedinha");
 const puloMario = document.getElementById("pulo-mario");
+const morteInimigo = document.getElementById("morte-inimigo");
 
 //IMAGENS DO MARIO
 const marioParado = new Image();
@@ -134,7 +135,18 @@ const inimigos = [
         bonecoMario.x + 50 >= this.x &&
         bonecoMario.y + 50 >= this.y
       ) {
-        morte();
+        if (bonecoMario.y < 368) {
+          let interval = setInterval(() => {
+            if (this.y < 650) {
+              this.y += 3;
+            } else {
+              clearInterval(interval);
+            }
+          }, 1);
+          somMorteInimigo();
+        } else {
+          morte();
+        }
       }
     },
   },
@@ -162,7 +174,18 @@ const inimigos = [
         bonecoMario.x + 50 >= this.x &&
         bonecoMario.y + 50 >= this.y
       ) {
-        morte();
+        if (bonecoMario.y < 368) {
+          let interval = setInterval(() => {
+            if (this.y < 650) {
+              this.y += 3;
+            } else {
+              clearInterval(interval);
+            }
+          }, 1);
+          somMorteInimigo();
+        } else {
+          morte();
+        }
       }
     },
   },
@@ -206,7 +229,18 @@ const inimigos = [
         bonecoMario.x + 50 >= this.x &&
         bonecoMario.y + 50 >= this.y
       ) {
-        morte();
+        if (bonecoMario.y < 368) {
+          let interval = setInterval(() => {
+            if (this.y < 650) {
+              this.y += 3;
+            } else {
+              clearInterval(interval);
+            }
+          }, 1);
+          somMorteInimigo();
+        } else {
+          morte();
+        }
       }
     },
   },
@@ -228,7 +262,18 @@ const inimigos = [
         bonecoMario.x + 50 >= this.x &&
         bonecoMario.y + 50 >= this.y
       ) {
-        morte();
+        if (bonecoMario.y < 368) {
+          let interval = setInterval(() => {
+            if (this.y < 650) {
+              this.y += 3;
+            } else {
+              clearInterval(interval);
+            }
+          }, 1);
+          somMorteInimigo();
+        } else {
+          morte();
+        }
       }
     },
   },
@@ -284,7 +329,18 @@ const inimigos = [
         bonecoMario.x + 50 >= this.x &&
         bonecoMario.y + 50 >= this.y
       ) {
-        morte();
+        if (bonecoMario.y < 368) {
+          let interval = setInterval(() => {
+            if (this.y < 650) {
+              this.y += 3;
+            } else {
+              clearInterval(interval);
+            }
+          }, 1);
+          somMorteInimigo();
+        } else {
+          morte();
+        }
       }
     },
   },
@@ -334,7 +390,18 @@ const inimigos = [
         bonecoMario.x + 50 >= this.x &&
         bonecoMario.y + 50 >= this.y
       ) {
-        morte();
+        if (bonecoMario.y < 368) {
+          let interval = setInterval(() => {
+            if (this.y < 650) {
+              this.y += 3;
+            } else {
+              clearInterval(interval);
+            }
+          }, 1);
+          somMorteInimigo();
+        } else {
+          morte();
+        }
       }
     },
   },
@@ -384,7 +451,18 @@ const inimigos = [
         bonecoMario.x + 50 >= this.x &&
         bonecoMario.y + 50 >= this.y
       ) {
-        morte();
+        if (bonecoMario.y < 368) {
+          let interval = setInterval(() => {
+            if (this.y < 650) {
+              this.y += 3;
+            } else {
+              clearInterval(interval);
+            }
+          }, 1);
+          somMorteInimigo();
+        } else {
+          morte();
+        }
       }
     },
   },
@@ -440,7 +518,18 @@ const inimigos = [
         bonecoMario.x + 50 >= this.x &&
         bonecoMario.y + 50 >= this.y
       ) {
-        morte();
+        if (bonecoMario.y < 368) {
+          let interval = setInterval(() => {
+            if (this.y < 650) {
+              this.y += 3;
+            } else {
+              clearInterval(interval);
+            }
+          }, 1);
+          somMorteInimigo();
+        } else {
+          morte();
+        }
       }
     },
   },
@@ -468,7 +557,18 @@ const inimigos = [
         bonecoMario.x + 50 >= this.x &&
         bonecoMario.y + 50 >= this.y
       ) {
-        morte();
+        if (bonecoMario.y < 368) {
+          let interval = setInterval(() => {
+            if (this.y < 650) {
+              this.y += 3;
+            } else {
+              clearInterval(interval);
+            }
+          }, 1);
+          somMorteInimigo();
+        } else {
+          morte();
+        }
       }
     },
   },
@@ -813,6 +913,11 @@ function movimentoMorteMario() {
     }
   }, 1);
   estadoAtual = 2;
+}
+
+function somMorteInimigo() {
+  morteInimigo.play();
+  morteInimigo.volume = 0.6;
 }
 
 function pegarMoedinha() {
